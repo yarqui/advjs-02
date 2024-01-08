@@ -27,6 +27,6 @@ export const handleAttributeMethods = (attr, method, elements) => {
       break;
 
     default:
-      console.log('Invalid attribute passed');
+      console.error('Invalid attribute passed to handleAttributeMethods');
   }
 };

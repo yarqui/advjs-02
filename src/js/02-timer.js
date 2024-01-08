@@ -1,10 +1,12 @@
 import flatpickr from 'flatpickr';
+import iziToast from 'izitoast';
 import 'flatpickr/dist/flatpickr.min.css';
 import {
   ATTRIBUTES,
   ATTRIBUTE_METHODS,
   handleAttributeMethods,
 } from './common';
+import 'izitoast/dist/css/iziToast.min.css';
 
 const refs = {
   timePicker: document.querySelector('input#datetime-picker'),
@@ -50,7 +52,11 @@ const handlePickResult = () => {
   const isReady = currentDateAndTime < selectedDateAndTime;
 
   if (!isReady) {
-    alert('Please choose a date in the future');
+    iziToast.warning({
+      message: 'Please choose a date in the future',
+      position: 'topCenter',
+      timeout: 2500,
+    });
     selectedDateAndTime = currentDateAndTime;
   }
 
