@@ -1,0 +1,2 @@
+const s={disabled:"disabled"},a={set:"set",remove:"remove",toggle:"toggle"},i=(r,o,t)=>{switch(Array.isArray(t)||(t=[t]),o){case a.toggle:t.forEach(e=>e.toggleAttribute(r));break;case a.set:t.forEach(e=>e.setAttribute(r,""));break;case a.remove:t.forEach(e=>e.removeAttribute(r));break;default:console.error("Invalid attribute passed to handleAttributeMethods")}};export{a as A,s as a,i as h};
+//# sourceMappingURL=common-d1e2e5f6.js.map
